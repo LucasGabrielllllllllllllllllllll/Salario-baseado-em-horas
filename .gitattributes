@@ -1,2 +1,11 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+horas_trabalhadas = float(input("Horas trabalhadas: "))
+horas_extras = float(input("Horas extras: "))
+valor_hora = float(input("Valor da hora: "))
+
+salario_bruto = (horas_trabalhadas + (horas_extras * 2)) * valor_hora
+inss = salario_bruto * 0.09
+fgts = salario_bruto * 0.08
+salario_liquido = salario_bruto - inss
+
+print(f"Salario bruto: {salario_bruto}\nSalario Liquido: {salario_liquido}\nINSS: {inss}\nFGTS: {fgts}")
+
